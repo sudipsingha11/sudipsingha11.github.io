@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Your Name</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="hero">
-  <img src="profile.jpg" class="profile-img">
-  <h1>Your Name</h1>
-  <p>Associate Professor | Your University</p>
+<header class="hero" id="hero">
+  <div class="overlay"></div>
 
-  <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="publications.html">Publications</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="cv.html">CV</a>
+  <div class="hero-content fade-in">
+    <img id="profilePic" class="profile-img">
+
+    <h1>Your Name</h1>
+    <p>Research Scholar at IIT Kharagpur</p>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
   </div>
 </header>
 
-<section class="content">
+<section class="content fade-in delay">
   <h2>About Me</h2>
   <p>
-    Write your bio here. Mention your research, interests, and background.
+    Write your bio here.
   </p>
 </section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
