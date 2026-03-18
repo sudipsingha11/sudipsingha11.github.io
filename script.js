@@ -1,4 +1,4 @@
-// Random profile images
+// OPTIONAL: Random profile image
 const profileImages = [
   "https://randomuser.me/api/portraits/men/32.jpg",
   "https://randomuser.me/api/portraits/men/45.jpg",
@@ -6,21 +6,8 @@ const profileImages = [
   "https://randomuser.me/api/portraits/men/76.jpg"
 ];
 
-// Random background images
-const bgImages = [
-  "https://source.unsplash.com/1600x900/?university",
-  "https://source.unsplash.com/1600x900/?technology",
-  "https://source.unsplash.com/1600x900/?research",
-  "https://source.unsplash.com/1600x900/?campus"
-];
-
-// Pick random profile
 const randomProfile = profileImages[Math.floor(Math.random() * profileImages.length)];
 document.getElementById("profilePic").src = randomProfile;
-
-// Pick random background
-const randomBg = bgImages[Math.floor(Math.random() * bgImages.length)];
-document.getElementById("hero").style.backgroundImage = `url(${randomBg})`;
 
 
 // Scroll animation
