@@ -3,97 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Portfolio | Scholar Name</title>
+    <title>Academic Portfolio | Scholar Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --accent-color: #34495e;
-            --text-color: #333;
-            --bg-color: #f4f4f4;
+            --primary: #1a365d; /* Deep Academic Blue */
+            --accent: #3182ce;
+            --text: #2d3748;
+            --bg: #f7fafc;
+            --card-bg: #ffffff;
         }
 
+        * { box-sizing: border-box; }
+        
         body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
             margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            color: var(--text);
+            background-color: var(--bg);
+            scroll-behavior: smooth;
         }
 
+        /* --- Header & Navigation --- */
         header {
-            background: var(--primary-color);
-            color: #fff;
-            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #2a4365 100%);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
 
+        h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 0; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
+
         nav {
-            background: #fff;
-            padding: 10px;
+            background: white;
+            padding: 15px;
             position: sticky;
             top: 0;
-            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85rem;
             text-transform: uppercase;
+            transition: color 0.3s;
         }
 
+        nav a:hover { color: var(--accent); }
+
+        /* --- Layout --- */
         .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         section {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border-top: 4px solid var(--primary);
         }
 
         h2 {
-            color: var(--primary-color);
-            border-left: 5px solid var(--primary-color);
-            padding-left: 15px;
-            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-top: 0;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 10px;
         }
 
-        .item {
-            margin-bottom: 15px;
+        /* --- Responsive Table --- */
+        .table-container { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95rem;
         }
+        th { background: #f8fafc; text-align: left; padding: 12px; color: var(--primary); }
+        td { padding: 12px; border-bottom: 1px solid #edf2f7; }
 
-        .date {
-            font-style: italic;
-            color: #666;
-            float: right;
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: transform 0.2s, background 0.2s;
         }
+        .btn:hover { background: var(--accent); transform: translateY(-2px); }
 
-        .publication {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            text-indent: -20px;
-        }
+        /* --- List Items --- */
+        .item { margin-bottom: 20px; position: relative; }
+        .date { font-weight: 600; color: var(--accent); font-size: 0.9rem; }
+        .pub-item { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #e2e8f0; }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.8rem;
-            color: #777;
-        }
-
-        @media (max-width: 600px) {
-            .date { float: none; display: block; }
-            nav { flex-wrap: wrap; }
+        /* --- Mobile Tweaks --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .container { margin: 20px auto; }
+            section { padding: 20px; }
+            nav { gap: 10px; padding: 10px; }
+            nav a { font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -101,12 +128,13 @@
 
 <header>
     <h1>Scholar Name</h1>
-    <p>Professor & Research Scholar | Department of Computer Science</p>
+    <p class="subtitle">Research Scholar & Educator | Computer Science & Engineering</p>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#academic">Academic</a>
+    <a href="#teaching">Teaching</a>
     <a href="#awards">Awards</a>
     <a href="#experience">Experience</a>
     <a href="#publications">Publications</a>
@@ -118,75 +146,99 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Welcome to my academic homepage. My research primarily focuses on <strong>Cryptography</strong>, 
-            <strong>Federated Learning</strong>, and <strong>Privacy-Preserving Systems</strong>. 
-            I am dedicated to developing secure protocols that enable collaborative machine learning 
-            without compromising individual data privacy.
+            I am a researcher specializing in <strong>Secure Federated Learning</strong> and <strong>Modern Cryptography</strong>. 
+            My work focuses on developing privacy-preserving frameworks that bridge the gap between theoretical security 
+            and practical distributed systems.
         </p>
+        <a href="cv.pdf" class="btn" download>📄 Download Curriculum Vitae</a>
     </section>
 
     <section id="academic">
         <h2>Academic Background</h2>
         <div class="item">
-            <span class="date">2021 — Present</span>
-            <strong>Doctor of Philosophy (Ph.D.) in Computer Science</strong><br>
+            <span class="date">2021 — PRESENT</span><br>
+            <strong>Ph.D. in Computer Science</strong><br>
             Indian Institute of Technology (IIT) Kharagpur
         </div>
         <div class="item">
-            <span class="date">2017 — 2021</span>
-            <strong>Bachelor of Technology (B.Tech)</strong><br>
-            Relevant Institution Name
+            <span class="date">2017 — 2021</span><br>
+            <strong>Bachelor of Technology</strong><br>
+            Engineering University Name
+        </div>
+    </section>
+
+    <section id="teaching">
+        <h2>Teaching & Mentorship</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Role</th>
+                        <th>Term</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Structures & Algorithms</td>
+                        <td>TA / Lab Instructor</td>
+                        <td>Spring 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Intro to Cryptography</td>
+                        <td>Teaching Assistant</td>
+                        <td>Autumn 2023</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
     <section id="awards">
         <h2>Awards & Achievements</h2>
         <ul>
-            <li>Recipient of the Institute Research Fellowship (2021).</li>
-            <li>Best Paper Award at [Conference Name, Year].</li>
-            <li>Qualified GATE (CS) with a top 1% percentile.</li>
+            <li>Institute Research Fellowship (2021-2026)</li>
+            <li>Best Poster Award at International Security Symposium</li>
+            <li>Qualified GATE (CS) with Top Percentile</li>
         </ul>
     </section>
 
     <section id="experience">
-        <h2>Professional Experience</h2>
+        <h2>Experience</h2>
         <div class="item">
-            <span class="date">2022 — Present</span>
-            <strong>Graduate Research Assistant</strong><br>
-            Security and Information Lab (SIL), IIT Kharagpur
-        </div>
-        <div class="item">
-            <span class="date">2023 (Summer)</span>
-            <strong>Research Intern</strong><br>
-            [Organization/Company Name]
+            <span class="date">JULY 2022 — PRESENT</span><br>
+            <strong>Research Assistant</strong> | SIL Lab, IIT Kharagpur
+            <p style="font-size: 0.9rem; color: #718096;">Focusing on Attribute-Based Signatures (ABS) and threshold protocols.</p>
         </div>
     </section>
 
     <section id="publications">
         <h2>Selected Publications</h2>
-        <div class="publication">
-            1. <strong>Author Name</strong>, Co-author, "A Secure Protocol for Attribute-Based Signatures in Federated Learning," 
-            <em>Journal of Cryptography</em>, vol. 12, pp. 45-67, 2024.
+        <div class="pub-item">
+            <strong>Author Name</strong>, et al. "Secure Aggregation in Federated Learning using RLWE." 
+            <em>Journal of Information Security</em>, 2024.
         </div>
-        <div class="publication">
-            2. <strong>Author Name</strong>, Co-author, "Mitigating Inversion Attacks in Decentralized Environments," 
-            <em>IEEE Transactions on Information Forensics and Security</em>, 2023.
+        <div class="pub-item">
+            <strong>Author Name</strong>, et al. "Privacy-Preserving Threshold Signatures." 
+            <em>IEEE Conference on Dependable Systems</em>, 2023.
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            <strong>Email:</strong> scholar.name@email.edu<br>
-            <strong>Office:</strong> Room 402, Dept. of Computer Science, IIT Kharagpur<br>
-            <strong>Socials:</strong> <a href="#">Google Scholar</a> | <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
-        </p>
+    <section id="contact" style="text-align: center; border-top: none; background: #2d3748; color: white;">
+        <h2 style="color: white; border-bottom: 1px solid #4a5568;">Get In Touch</h2>
+        <p>Office: Department of CSE, IIT Kharagpur, WB, India</p>
+        <p>Email: <a href="mailto:yourname@iitkgp.ac.in" style="color: #63b3ed;">yourname@iitkgp.ac.in</a></p>
+        <div style="margin-top: 20px;">
+            <a href="#" style="color: white; margin: 0 10px;">LinkedIn</a> | 
+            <a href="#" style="color: white; margin: 0 10px;">GitHub</a> | 
+            <a href="#" style="color: white; margin: 0 10px;">Scholar</a>
+        </div>
     </section>
 
 </div>
 
-<footer>
-    &copy; 2026 Scholar Name. Built with simple HTML/CSS.
+<footer style="text-align: center; padding: 40px; font-size: 0.8rem; color: #a0aec0;">
+    &copy; 2026 Scholar Portfolio | Last updated: March 2026
 </footer>
 
 </body>
