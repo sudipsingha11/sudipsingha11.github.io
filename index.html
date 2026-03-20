@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudip Singha - Home</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -24,12 +25,11 @@
         a:hover {
             text-decoration: underline;
         }
-        
- header {
+
+        header {
             background: #003366;
             color: white;
             padding: 0.6rem 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
@@ -44,7 +44,6 @@
         nav a {
             color: white;
             font-weight: 700;
-            font-size: 1rem;
         }
 
         nav a:hover {
@@ -53,210 +52,147 @@
 
         .hero {
             text-align: center;
-            padding: 1rem 1rem;
-            margin-bottom: 1rem;
+            padding: 1rem;
         }
 
         .hero h1 {
             font-size: 1.6rem;
-            margin-bottom: 0.3rem;
         }
 
         .hero p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
         section {
             padding: 1rem;
             max-width: 960px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         h2 {
-            font-size: 1.5rem;
             color: #003366;
             border-bottom: 1px solid #0078e7;
-            margin-bottom: 0.8rem;
-            padding-bottom: 0.2rem;
         }
 
+        /* FLEX LAYOUT */
         .about-container {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            align-items: flex-start;
         }
 
         .about-text {
             flex: 2;
-            min-width: 45%;
-            font-size: 0.9rem;
+            min-width: 300px;
         }
 
         .about-text img {
-            width: 160px;
+            width: 140px;
+            height: auto;
             border-radius: 8px;
-            margin-botatom: 0.6rem;
+            display: block;
+            margin-bottom: 0.6rem;
         }
-
-        .about-container img {
-    width: 140px;       /* adjust size as needed */
-    height: auto;       /* keeps aspect ratio */
-    border-radius: 8px;
-    display: block;
-    margin-bottom: 0.6rem;
-}
 
         .sidebar {
             flex: 1;
-            background-color: #fff;
+            min-width: 220px;
+            background: white;
             padding: 0.8rem;
             border-radius: 6px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-size: 0.85rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .sidebar h3 {
-            font-size: 1rem;
             color: #003366;
-            margin-bottom: 0.6rem;
             border-bottom: 2px solid #0078e7;
-            padding-bottom: 0.2rem;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 0.3rem;
-        }
-
-        .sidebar ul li a {
-            color: #0078e7;
-        }
-
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .latest-news-container {
-            margin-top: 1rem;
-            position: relative;
-            height: 240px;
-            overflow: hidden;
-            background: #e5f3ff;
-            border-radius: 6px;
-            padding: 0.8rem;
-        }
-
-        .scrolling-news {
-            position: absolute;
-            animation: scrollNews 15s linear infinite;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .scrolling-news li {
-            font-size: 0.75rem;
-            color: #003366;
-            margin: 0.3rem 0;
-        }
-
-        @keyframes scrollNews {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(-100%); }
         }
 
         footer {
             text-align: center;
             background: #003366;
             color: white;
-            padding: 0.6rem 1rem;
+            padding: 0.6rem;
             margin-top: 1.5rem;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="academic.html">Academic</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Academic</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Teaching</a></li>
+        </ul>
+    </nav>
+</header>
 
-            </ul>
-        </nav>
-    </header>
+<section class="hero">
+    <h1>Welcome to My Personal Website</h1>
+    <p>In a conflict between the heart and the brain, follow your heart.</p>
+    <p>- Swami Vivekananda</p>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to My Personal Website</h1>
-        <p>In a conflict between the heart and the brain, follow your heart.</p>
-        <p>- Swami Vivekananda</p>
-    </section>
+<section>
+    <h2>About Me</h2>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <h2>About Me</h2>
+    <div class="about-container">
+
+        <!-- LEFT SIDE -->
         <div class="about-text">
-            <!-- Picture and Biography -->
-                <img src="IMG-20260318-WA0007.jpg" alt="Sudip Singha">
-                <h3><strong>Sudip Singha</strong></h3>
-                <p>
-   I am currently Research Fellow at the <a href="https://www.iitkgp.ac.in/department/MA">IIT Kharagpur</a>, 
-                    <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a> under the supervision of 
-                    <a href="https://facweb.iitkgp.ac.in/~sourav/">Prof. (Dr.) Sourav Mukhopadhyay</a>, India.
-                    My academic background includes a B.Sc. degree from <a href="https://www.siliguricollege.org.in/">Siliguri College</a>, affiliated with the <a href="https://www.nbu.ac.in/#gsc.tab=0">University of North Bengal</a>, and an M.Sc. in Mathematics from the <a href="https://www.nbu.ac.in/#gsc.tab=0">University of North Bengal</a>.
-</p>
-</div>
+            <img src="IMG-20260318-WA0007.jpg" alt="Sudip Singha">
 
-            <!-- Sidebar: Research Profile and Contact -->
-            <div class="sidebar">
-                <h3>Research Interests</h3>
-                <ul>
-                    <li>Federated Learning</li>
-                    <li>Lattice-based Cryptography</li>
-                    <li>Registered Attribute-based Signature</li>
-                    <li>Homomorphic Encryption</li>
-                </ul>
-               <!-- <h3>Research Profile</h3>
-                <ul style="list-style: none; display: flex; gap: 6px; padding: 0; margin: 0;">
-                    <li><a href="https://scholar.google.com/citations?user=D_iMmsQAAAAJ&hl=en">Google Scholar</a></li>
-                    <li><a href="https://dblp.org/pid/305/4367.html">DBLP</a></li>
-                </ul>-->
+            <h3>Sudip Singha</h3>
 
-                <!-- Latest News Section -->
-               <!-- <div class="latest-news-container">
-                    <h3 class="latest-news-heading">Latest News</h3>
-                    <ul class="scrolling-news">
-                        <li><strong>Febuary 2026:</strong> Accepted a paper on Quadratic FE in <a href="https://pkc.iacr.org/2026/">PKC 2026</a>.</li>
-                       <li><strong>Nov 2025:</strong> Awarded <a href= "https://www.unisg.ch/en/research/research-at-hsg/research-support/internal-funding/international-postdoctoral-fellowships/"> Great Mind Postdoctoral Fellowship</a>.</li>
-                        <li>Invited to join as a PC member for <a href= "https://iseclab.ec.t.kanazawa-u.ac.jp/en/APKC2026.html"> ACM APKC2025</a>.</li>
-                        <li>Served as a PC member for <a href= "https://www.indocrypt2025.in"> Indocrypt 2025 </a> and <a href="https://icsp.co.in/2025/">ICSP 2025</a>.</li>
-                        <li><strong>March 2025:</strong> Published a paper in the IACR journal <a href="https://cic.iacr.org">CiC 2025</a>.</li>
-                        <li><strong>Febuary 2025:</strong> Published a paper in the IACR conference <a href="https://pkc.iacr.org/2025/">PKC 2025</a>.</li>
-                        <li><strong>January 2025:</strong> Published a paper in the journal <a href="https://www.sciencedirect.com/journal/theoretical-computer-science">Theoretical Computer Science</a>.</li>
-                
-                    </ul>
-                </div>-->
+            <p>
+                I am currently Research Fellow at 
+                <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a> 
+                under the supervision of 
+                <a href="https://facweb.iitkgp.ac.in/~sourav/">Prof. Sourav Mukhopadhyay</a>.
+                <br><br>
 
-                <h3>Contact Address</h3>
-                <p><strong>Sudip Singha</strong><br> Senior Research Fellow<br> BRH, IIT Kharagpur, Room B-505 <br> Kharagpur, West Bengal, Postcode - 721302 <br> India<br> Email: sudipsingha8167[at]gmail[dot]com<br> Mobile: (+91) 8167482678</p>
-            </div>
+                I completed my B.Sc. from 
+                <a href="https://www.siliguricollege.org.in/">Siliguri College</a> 
+                and M.Sc. in Mathematics from 
+                <a href="https://www.nbu.ac.in/">University of North Bengal</a>.
+            </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Sudip Singha. All Rights Reserved.</p>
-    </footer>
+        <!-- RIGHT SIDE -->
+        <div class="sidebar">
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Federated Learning</li>
+                <li>Lattice-based Cryptography</li>
+                <li>Attribute-based Signature</li>
+                <li>Homomorphic Encryption</li>
+            </ul>
+
+            <h3>Contact Address</h3>
+            <p>
+                <strong>Sudip Singha</strong><br>
+                Senior Research Fellow<br>
+                IIT Kharagpur<br>
+                West Bengal - 721302<br>
+                India<br><br>
+
+                Email: sudipsingha8167[at]gmail.com<br>
+                Mobile: +91 8167482678
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Sudip Singha</p>
+</footer>
 
 </body>
 </html>
