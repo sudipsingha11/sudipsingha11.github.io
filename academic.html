@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CV</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudip Singha - Academic</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        a {
+            color: #0078e7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 0.6rem 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 1rem;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #003366;
+            border-bottom: 1px solid #0078e7;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #003366;
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .cv-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background-color: #0078e7;
+            color: white;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cv-link:hover {
+            background-color: #005fa3;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            background: #003366;
+            color: white;
+            padding: 0.6rem;
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
+<header>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -17,15 +114,36 @@
         </ul>
     </nav>
 </header>
-  
 
+<section>
+    <h2>Academic Background</h2>
 
-<section class="content">
-  <h2>Curriculum Vitae</h2>
+    <h3>Education</h3>
+    <ul>
+        <li><strong>M.Sc. in Mathematics</strong><br>
+            <a href="https://www.nbu.ac.in/">University of North Bengal</a>
+        </li>
+        <li><strong>B.Sc.</strong><br>
+            <a href="https://www.siliguricollege.org.in/">Siliguri College</a>
+        </li>
+    </ul>
 
-  <p>You can upload a PDF CV or write details here.</p>
-  <a href="cv.pdf">Download CV</a>
+    <h3>Current Position</h3>
+    <ul>
+        <li><strong>Senior Research Fellow</strong><br>
+            <a href="https://www.iitkgp.ac.in/">IIT Kharagpur</a><br>
+            Supervisor: <a href="https://facweb.iitkgp.ac.in/~sourav/">Prof. Sourav Mukhopadhyay</a>
+        </li>
+    </ul>
+
+    <h3>Curriculum Vitae</h3>
+    <p>You can download my detailed CV below:</p>
+    <a href="cv.pdf" class="cv-link">Download CV (PDF)</a>
 </section>
+
+<footer>
+    <p>&copy; 2026 Sudip Singha</p>
+</footer>
 
 </body>
 </html>
