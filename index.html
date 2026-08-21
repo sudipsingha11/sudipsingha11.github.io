@@ -6,7 +6,117 @@
     <title>Sudip Singha - Home</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        a {
+            color: #0078e7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background: #003366;
+            color: white;
+            padding: 0.6rem 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 1.6rem;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+        }
+
+        section {
+            padding: 1rem;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #003366;
+            border-bottom: 1px solid #0078e7;
+        }
+
+        /* FLEX LAYOUT */
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text img {
+            width: 140px;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 220px;
+            background: white;
+            padding: 0.8rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h3 {
+            color: #003366;
+            border-bottom: 2px solid #0078e7;
+        }
+
+        footer {
+            text-align: center;
+            background: #003366;
+            color: white;
+            padding: 0.6rem;
+            margin-top: 1.5rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -84,6 +194,5 @@
     <p>&copy; 2026 Sudip Singha</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
